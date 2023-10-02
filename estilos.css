@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebe6ea;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*navbar*/
+.menu {
+  background-color: #273a2d;
+  color: #ebe6ea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ebe6ea;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  transition: 0.4s;
+  opacity: 1;
+  max-width: 50%;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.menu-list li {
+  margin-right: 20px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #ebe6ea;
+  font-weight: bold;
+}
+
+.menu-list a:hover {
+  color: #6f7357;
+}
+
+.decoracao-texto-menu {
+  color: #ebe6ea;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/*navbar*/
+
+#titulo-prinicipal {
+  color: #273a2d;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 5vh;
+}
+
+#main {
+  height: 95vh;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+#lista-cidades {
+  height: 30vh;
+  width: 40vw;
+  overflow: auto;
+  border: 1px #273a2d solid;
+}
+#busca-cidade {
+  height: 5vh;
+  width: 30vw;
+  border: 1px #6f7357 solid;
+  border-radius: 30px;
+  padding: 2vh;
+  background-color: #273a2d;
+  color: #ebe6ea;
+  font-size: 2.5vh;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+#busca-cidade::placeholder {
+  color: #e4c5c43a;
+}
+.botao {
+  height: 8vh;
+  width: 30vw;
+  background-color: #273a2d;
+  border-radius: 45px;
+  color: #ebe6ea;
+  font-size: 2.5vh;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #6f7357;
+  color: #e4c5c4;
+}
+
+.radio-cidade {
+  display: none;
+}
+
+.label-radio-cidade {
+  display: inline-block;
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #273a2d;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+  width: 39vw;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+
+.radio-cidade:checked + .label-radio-cidade {
+  background-color: #273a2d;
+  color: #ebe6ea;
+  border: 1px solid #ebe6ea;
+}
+
+
+#tela-previsao {
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  width: 85vw;
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+#dados-previsao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5vw;
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 45%;
+  min-width: 10vw;
+  min-height: 35vh;
+  max-height: 60vh;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 25vh;
+  border: 1px #273a2d solid;
+}
+
+.row-card {
+  display: flex;
+  color: #273a2d;
+  font-family: "Roboto", sans-serif;
+  margin: 0.2rem;
+  width: 100%;
+  padding: 0.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.row-card div {
+  margin: 5px;
+}
+
+#cabecalho-cidade {
+  font-family: "Roboto", sans-serif;
+  color: #273a2d;
+}
+.sobre {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titulo-sobre {
+  text-align: center;
+  color: #273a2d;
+  font-size: 40px;
+  margin-top: 30px;
+}
+.paragrafo-sobre {
+  font-size: 25px;
+  line-height: 1.6;
+  margin: 20px;
+  padding: 0 20px;
+  text-align: center;
+  color: #6f7357;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  /*nav-bar-responsiva*/
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    background-color: #273a2d;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    max-height: 0;
+    overflow: auto;
+    transition: 0.3s ease-in-out;
+  }
+
+  .menu-list.active {
+    display: flex;
+    opacity: 1;
+    max-height: 200px;
+  }
+  .menu-list li {
+    margin: 10px 0;
+  }
+
+  /*outros*/
+  #dados-previsao {
+    flex-direction: column;
+    align-items: center;
+  }
+  .botao {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+  }
+
+  #card {
+    width: 90%;
+  }
+  #busca-cidade {
+    width: 75%;
+  }
+  #lista-cidades {
+    width: 75%;
+  }
+}

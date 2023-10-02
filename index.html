@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav class="menu">
+      <div class="menu-toggle" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+      <ul class="menu-list" id="menuList">
+          <li><a class="decoracao-texto-menu" href="index.html">Previsão</a></li>
+          <li><a class="decoracao-texto-menu"  href="sobre.html">Sobre</a></li>
+      </ul>
+  </nav>
+  <script type="text/javascript" src="menu.js"></script>
+    <section id="main">
+      <h1 id="titulo-prinicipal">Previsão do tempo</h1>
+      <input
+        id="busca-cidade"
+        maxlength="9"
+        name="busca-cidade"
+        oninput=" app.buscaCidade()"
+        placeholder="Digite o nome da cidade"
+        type="text"
+      />
+
+      <ul id="lista-cidades"></ul>
+      <button
+        id="botao-buscar"
+        class="botao"
+        type="button"
+        onclick="app.buscaPrevisao()"
+      >
+        Buscar
+      </button>
+    </section>
+    <section id="tela-previsao">
+      <header id="cabecalho-cidade">
+        <p class="itens-header">
+          <span class="cabec">Cidade:</span>
+          <span id="nome-cidade"></span>
+        </p>
+        <p class="itens-header">
+          <span class="cabec">Estado:</span>
+          <span id="nome-estado"></span>
+        </p>
+        <p class="itens-header">
+          <span class="cabec">Atualizada em:</span>
+          <span id="data-atualizacao"></span>
+        </p>
+      </header>
+      <section id="dados-previsao">
+        <section id="card">
+          <div class="row-card">
+            <div class="item-cabec">Data:</div>
+            <div id="data1"></div>
+          </div>
+
+          <div class="row-card">
+            <div class="item-cabec">Condição:</div>
+            <div id="condicao1"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Máxima:</div>
+            <div id="max1"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Mínima:</div>
+            <div id="min1"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">Indice UV:</div>
+            <div id="uv1"></div>
+          </div>
+        </section>
+        <section id="card">
+          <div class="row-card">
+            <div class="item-cabec">Data:</div>
+            <div id="data2"></div>
+          </div>
+
+          <div class="row-card">
+            <div class="item-cabec">Condição:</div>
+            <div id="condicao2"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Máxima:</div>
+            <div id="max2"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Mínima:</div>
+            <div id="min2"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">Indice UV:</div>
+            <div id="uv2"></div>
+          </div>
+        </section>
+        <section id="card">
+          <div class="row-card">
+            <div class="item-cabec">Data:</div>
+            <div id="data3"></div>
+          </div>
+
+          <div class="row-card">
+            <div class="item-cabec">Condição:</div>
+            <div id="condicao3"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Máxima:</div>
+            <div id="max3"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Mínima:</div>
+            <div id="min3"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">Indice UV:</div>
+            <div id="uv3"></div>
+          </div>
+        </section>
+        <section id="card">
+          <div class="row-card">
+            <div class="item-cabec">Data:</div>
+            <div id="data4"></div>
+          </div>
+
+          <div class="row-card">
+            <div class="item-cabec">Condição:</div>
+            <div id="condicao4">Chuva</div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Máxima:</div>
+            <div id="max4"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Mínima:</div>
+            <div id="min4"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">Indice UV:</div>
+            <div id="uv4"></div>
+          </div>
+        </section>
+        <section id="card">
+          <div class="row-card">
+            <div class="item-cabec">Data:</div>
+            <div id="data5"></div>
+          </div>
+
+          <div class="row-card">
+            <div class="item-cabec">Condição:</div>
+            <div id="condicao5">Chuva</div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Máxima:</div>
+            <div id="max5"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Mínima:</div>
+            <div id="min5"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">Indice UV:</div>
+            <div id="uv5"></div>
+          </div>
+        </section>
+        <section id="card">
+          <div class="row-card">
+            <div class="item-cabec">Data:</div>
+            <div id="data6"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">Condição:</div>
+            <div id="condicao6">Chuva</div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Máxima:</div>
+            <div id="max6"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">T. Mínima:</div>
+            <div id="min6"></div>
+          </div>
+          <div class="row-card">
+            <div class="item-cabec">Indice UV:</div>
+            <div id="uv6"></div>
+          </div>
+        </section>
+      </section>
+      <button onclick="app.voltar()" id="voltar" class="botao">Voltar</button>
+    </section>
+  </body>
+</html>
