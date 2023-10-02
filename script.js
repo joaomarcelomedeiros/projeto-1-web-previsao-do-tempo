@@ -91,16 +91,13 @@ class App {
     document.getElementById("nome-cidade").innerText = data.cidade;
     document.getElementById('nome-estado').innerText = data.estado;
     
-    const dataDeAtualizacao = new Date(data.atualizado_em);
-    const dia = dataDeAtualizacao.getDate();
-    const mes = dataDeAtualizacao.getMonth() + 1; 
-    const ano = dataDeAtualizacao.getFullYear();
-    const dataFormatoBrasileiro = `${dia < 10 ? '0' : ''}${dia}/${mes < 10 ? '0' : ''}${mes}/${ano}`;
+    const dataDeAtualizacao = App.mudaFormatoData(data.atualizado_em);
 
-    document.getElementById('data-atualizacao').innerText= dataFormatoBrasileiro;
+
+    document.getElementById('data-atualizacao').innerText= dataDeAtualizacao;
 
     for(let i =0 ; i < 6; i++ ){
-      document.getElementById('data' + (i + 1)).innerText = data.clima[i].data;
+      document.getElementById('data' + (i + 1)).innerText = App.mudaFormatoData(data.clima[i].data);
       document.getElementById('condicao' + (i + 1)).innerText = data.clima[i].condicao_desc;
       document.getElementById('min' + (i + 1)).innerText = data.clima[i].min + " ºC";
       document.getElementById('max' + (i + 1)).innerText = data.clima[i].max + " ºC";
@@ -110,6 +107,13 @@ class App {
   voltar(){
     document.getElementById('main').style.display = "flex"
     document.getElementById('tela-previsao').style.display="none";
+  }
+  static mudaFormatoData(data){
+    const date = new Date(data);
+    const dia = date.getDate();
+    const mes = date.getMonth() + 1; 
+    const ano = date.getFullYear();
+    return `${dia < 10 ? '0' : ''}${dia}/${mes < 10 ? '0' : ''}${mes}/${ano}`;
   }
 }
 

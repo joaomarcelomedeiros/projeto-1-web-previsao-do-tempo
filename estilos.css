@@ -74,7 +74,7 @@ a {
 
 /*navbar*/
 
-#titulo-prinicipal {
+#titulo-principal {
   color: #273a2d;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -241,7 +241,7 @@ a {
   .menu-toggle {
     display: flex;
   }
-
+  
   .menu-list {
     display: none;
     flex-direction: column;
@@ -284,5 +284,8 @@ a {
   }
   #lista-cidades {
     width: 75%;
+  }
+  #titulo-principal{
+    font-size: 3.5vh;
   }
 }
