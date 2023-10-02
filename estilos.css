@@ -167,6 +167,7 @@ a {
   flex-direction: column;
   margin: 0 auto;
   overflow: auto;
+  padding: 5vh;
 }
 
 #dados-previsao {
@@ -275,9 +276,12 @@ a {
     height: 10vh;
     border-radius: 50%;
   }
-
+  #tela-previsao{
+    padding: 2vh;
+  }
   #card {
     width: 90%;
+    height: 60%;
   }
   #busca-cidade {
     width: 75%;
