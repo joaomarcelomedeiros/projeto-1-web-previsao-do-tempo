@@ -177,7 +177,7 @@ a {
   padding: 5vw;
 }
 
-#card {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -284,7 +284,7 @@ a {
   #tela-previsao{
     padding: 2vh;
   }
-  #card {
+  .card {
     width: 90%;
     height: 60%;
   }
